@@ -25,7 +25,8 @@ class CashRegister
   end
 
   def void_last_transaction
-    @last_transaction[0]
+    @last_transaction[2].times {|remove| @items.pop}
+    end
     refund = @last_transaction[1]*@last_transaction[2]
     @total -= refund
   end
