@@ -7,7 +7,7 @@ class CashRegister
     @items = []
   end
 
-  def add_item(item, count = 1, price)
+  def add_item(item, price, count = 1)
     @total += price*count
     count.to_i.times do
       @items << item
