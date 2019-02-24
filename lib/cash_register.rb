@@ -8,6 +8,7 @@ class CashRegister
 
   def add_item(item, count = 1, price)
     @total += price*count
+    @items << item.times(count)
   end
 
   def apply_discount
