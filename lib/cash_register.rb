@@ -25,6 +25,8 @@ class CashRegister
   end
 
   def void_last_transaction
-    @last_transaction
+    @last_transaction[0]
+    refund = @last_transaction[1]*@last_transaction[2]
+    @total -= refund
   end
 end
